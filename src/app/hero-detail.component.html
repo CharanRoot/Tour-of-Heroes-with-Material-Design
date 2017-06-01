@@ -1,0 +1,39 @@
+<div *ngIf="hero" fxLayout="column" fxLayoutGap="10px">
+
+    <md-card class="demo-card demo-basic" style="padding: 10px">
+        <h2>{{hero.name}} details!</h2>
+        <md-card-content>
+            <form name="herodetail" #heroForm="ngForm" novalidate (ngSubmit)="save()">
+
+                <md-input-container class="demo-full-width">
+                    <input mdInput placeholder="Id (disabled)" disabled [value]="hero.id">
+                </md-input-container>
+
+                <md-input-container class="demo-full-width">
+                    <input mdInput [(ngModel)]="hero.name" placeholder="Name" name="name" required>
+                    <md-error>This field is required</md-error>
+                </md-input-container>
+
+                <md-input-container class="demo-full-width">
+                    <input mdInput [(ngModel)]="hero.primaryattribute" placeholder="Primary Power" name="power" required>
+                    <md-error>This field is required</md-error>
+                </md-input-container>
+
+                <md-input-container class="demo-full-width">
+                    <textarea mdInput [(ngModel)]="hero.appearances" placeholder="appearances in movies" name="appearances" required> </textarea>
+                    <md-error>This field is required</md-error>
+                </md-input-container>
+
+                <md-input-container class="demo-full-width">
+                    <textarea mdInput [(ngModel)]="hero.comments" placeholder="comments" name="comments" required></textarea>
+                    <md-error>This field is required</md-error>
+                </md-input-container>
+
+
+                <div style="width: 60%; margin: 0px auto;">
+                    <button md-button (click)="goBack()">Back</button>
+                    <button color="primary" md-raised-button [disabled]="!heroForm.form.valid">Submit</button>
+                </div>
+            </form>
+        </md-card-content>
+    </md-card>

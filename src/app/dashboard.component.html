@@ -1,0 +1,33 @@
+<h3>Top Heroes</h3>
+<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+    <a *ngFor="let hero of heroes" [routerLink]="['/detail', hero.id]" fxFlex="25">
+        <md-card class="mdcard">
+            <img md-card-md-image="" style="float: left" fxFlex="30">
+            <md-card-title-group fxFlex="30">
+                <div>
+                    <md-card-title>{{hero.name}}</md-card-title>
+                    <md-card-subtitle>{{hero.primaryattribute}}</md-card-subtitle>
+                </div>
+            </md-card-title-group>
+        </md-card>
+    </a>
+</div>
+
+
+<h3>Recently Added</h3>
+
+<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+    <a *ngFor="let hero of heroes" [routerLink]="['/detail', hero.id]" fxFlex="25">
+        <md-card class="mdcard">
+            <img md-card-md-image="" style="float: left" fxFlex="30">
+            <md-card-title-group fxFlex="30">
+                <div>
+                    <md-card-title>{{hero.name}}</md-card-title>
+                    <md-card-subtitle>{{hero.primaryattribute}}</md-card-subtitle>
+                </div>
+            </md-card-title-group>
+        </md-card>
+    </a>
+</div>
+
+

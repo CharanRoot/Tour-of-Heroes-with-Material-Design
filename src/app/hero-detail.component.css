@@ -1,0 +1,27 @@
+.mat-input-element:disabled {
+    color: rgba(0,0,0,.87);
+}
+
+
+
+.demo-basic {
+  padding: 0;
+}
+.demo-basic .mat-card-content {
+  padding: 16px;
+}
+.demo-full-width {
+  width: 100%;
+}
+
+.demo-card {
+  margin: 16px;
+}
+
+.demo-textarea {
+  resize: none;
+  border: none;
+  overflow: auto;
+  padding: 0;
+  background: lightblue;
+}

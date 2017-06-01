@@ -1,0 +1,32 @@
+<div *ngIf="hero">
+    <h2 md-dialog-title style="padding: 10px">New Hero</h2>
+
+        <form name="herodetail" fxLayout="column" #heroForm="ngForm" novalidate>
+           
+            <md-input-container class="demo-full-width" style="width: 650px">
+                <input mdInput [(ngModel)]="hero.name" placeholder="Name" id="name" name="name" required>
+                <md-error>This field is required</md-error>
+            </md-input-container>
+
+            <md-input-container class="demo-full-width">
+                <input mdInput [(ngModel)]="hero.primaryattribute" placeholder="Primary Power" name="primaryattribute" required>
+                <md-error>This field is required</md-error>
+            </md-input-container>
+
+            <md-input-container class="demo-full-width">
+                <textarea mdInput [(ngModel)]="hero.appearances" placeholder="appearances in movies" name="appearances" required> </textarea>
+                <md-error>This field is required</md-error>
+            </md-input-container>
+
+            <md-input-container class="demo-full-width">
+                <textarea mdInput [(ngModel)]="hero.comments" placeholder="comments" name="comments" required></textarea>
+                <md-error>This field is required</md-error>
+            </md-input-container>
+
+
+            <div style="width: 80%; margin: 0px auto;">
+                <button md-button (click)="cancel()">Cancel</button>
+                <button color="primary" md-raised-button [disabled]="!heroForm.form.valid" (click)="save()">Save</button>
+            </div>
+        </form>
+ 

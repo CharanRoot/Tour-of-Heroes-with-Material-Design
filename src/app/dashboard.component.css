@@ -1,0 +1,13 @@
+
+
+img {
+  background-color: gray;
+}
+.mdcard{
+     margin: 15px;
+}
+
+.mat-card-title-group {
+    margin: 25px;
+    float: left;
+}

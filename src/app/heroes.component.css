@@ -1,0 +1,13 @@
+.heroes-card {
+    padding-bottom:10px;
+    padding-top:10px;
+}
+img {
+  background-color: gray;
+}
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 5px
+}

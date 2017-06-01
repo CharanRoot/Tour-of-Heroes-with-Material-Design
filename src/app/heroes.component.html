@@ -1,0 +1,28 @@
+<div style="padding: 10px">
+
+    <div class="header">
+        <h2>My Heroes </h2>
+        <button md-fab color="primary" style=" margin-left: auto;" (click)="add()">
+    <md-icon>add</md-icon>
+  </button>
+    </div>
+
+    <div>
+        <md-card class="heroes-card" fxLayout="row" *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" [routerLink]="['/detail', hero.id]">
+            <md-card-header class="site-no-margin">
+                <img md-card-avatar src="">
+                <md-card-title>{{hero.id}}</md-card-title>
+                <md-card-subtitle>{{hero.name}}</md-card-subtitle>
+            </md-card-header>
+            <div fxFlex></div>
+            <button md-icon-button (click)="delete(hero); $event.stopPropagation()"><md-icon>delete_forever</md-icon></button>
+        </md-card>
+    </div>
+    <div *ngIf="selectedHero">
+        <h2>
+            {{selectedHero.name | uppercase}} is my hero
+        </h2>
+        <button md-raised-button color="primary" (click)="gotoDetail()">View Details</button>
+    </div>
+
+</div>
